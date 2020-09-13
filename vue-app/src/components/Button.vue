@@ -1,5 +1,5 @@
 <template>
-  <button>
+  <button class="md:uppercase">
     <slot />
   </button>
 </template>
@@ -13,27 +13,20 @@ export default Vue.extend({
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style scoped lang="postcss">
 button {
-  background-color: steelblue;
-  border: none;
-  border-radius: 4px;
-  color: #fff;
-  cursor: pointer;
-  padding: 0.75rem 1rem;
-  transition: background-color 250ms ease-in-out;
-
-  &:hover {
-    background-color: #346085;
-  }
+  @apply bg-primary text-white border-0 rounded px-3 py-2 cursor-pointer transition-colors duration-300;
+}
+button:hover {
+  @apply bg-primary-dark;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 768px) {
   button {
-    background-color: rebeccapurple;
-    &:hover {
-      background-color: #472469;
-    }
+    @apply bg-secondary;
+  }
+  button:hover {
+    @apply bg-secondary-dark;
   }
 }
 </style>

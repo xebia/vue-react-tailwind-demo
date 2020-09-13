@@ -17,7 +17,7 @@ export default Vue.extend({
 });
 </script>
 
-<style lang="scss">
+<style lang="postcss" scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -25,5 +25,9 @@ export default Vue.extend({
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+h1 {
+  @apply text-4xl font-bold mb-4;
 }
 </style>
